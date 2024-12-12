@@ -1,0 +1,58 @@
+{
+  "builder_name": "json",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "valley-webvid2_m-pretrain-703_k",
+  "dataset_size": 423302573,
+  "description": "",
+  "download_checksums": {
+    "hf://datasets/luoruipu1/Valley-webvid2M-Pretrain-703K@80fa38869ed19fd99f745e74b6eec17e015ebddc/chat.json": {
+      "num_bytes": 268718384,
+      "checksum": null
+    },
+    "hf://datasets/luoruipu1/Valley-webvid2M-Pretrain-703K@80fa38869ed19fd99f745e74b6eec17e015ebddc/chat_chinese.json": {
+      "num_bytes": 464271172,
+      "checksum": null
+    }
+  },
+  "download_size": 732989556,
+  "features": {
+    "id": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "video": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "conversations": [
+      {
+        "from": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "value": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    ]
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 1156292129,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 423302573,
+      "num_examples": 1405942,
+      "dataset_name": "valley-webvid2_m-pretrain-703_k"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}
