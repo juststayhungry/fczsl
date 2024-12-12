@@ -44,5 +44,6 @@ parser.add_argument("--adapter_dim", help="middle dimension of Adapter", type=in
 parser.add_argument("--init_lamda", help="lamda initialization value", type=float, default=0.1)
 parser.add_argument("--cmt_layers", help="Number of layers in cross-attention", type=int, default=2)
 parser.add_argument("--pca", help="use pca",type=str_to_bool, default=False)
+parser.add_argument("--n_components",type=int, default=128)
 
 
