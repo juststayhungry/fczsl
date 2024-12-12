@@ -1,5 +1,5 @@
 model:
-  model_name: troika1 # or troika
+  model_name: troika # or troika
   prompt_template: ["a photo of x x", "a photo of x", "a photo of x"]
   ctx_init: ["a photo of ", "a photo of ", "a photo of "]
   clip_model: "ViT-L/14"
