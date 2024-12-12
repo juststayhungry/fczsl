@@ -35,7 +35,7 @@ def pca_transform(features, V):
     reduced_features = torch.matmul(features_centered, V)
     return reduced_features
 
-def get_compo(model, train_dataloader):  # 
+def get_compo(model, train_dataloader,config):  # 
     model.eval()
     # 训练时计算主成分矩阵 V_img 和 V_text
     img_features_list = []
@@ -51,7 +51,7 @@ def get_compo(model, train_dataloader):  #
 
     # 拼接所有特征
     all_img_features = torch.cat(img_features_list, dim=0)
-    return get_pca_v(all_img_features, n_components=128)
+    return get_pca_v(all_img_features, n_components = config.n_components)
 
 def train_model(model, optimizer, config, train_dataset, val_dataset, test_dataset):
     train_dataloader = DataLoader(
