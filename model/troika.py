@@ -199,7 +199,7 @@ class Troika(nn.Module):
         self.attr_ctx_vectors = nn.Parameter(attr_ctx_vectors).cuda()
         self.obj_ctx_vectors = nn.Parameter(obj_ctx_vectors).cuda()
         if config.pca:
-            output_dim1 = 128
+            output_dim1 = config.n_components #128
         else:
             output_dim1 = output_dim
         self.attr_disentangler = Disentangler(output_dim1)
