@@ -138,7 +138,7 @@ def train_model(model, optimizer, config, train_dataset, val_dataset, test_datas
             print(f"best epoch{best_epoch}")
             print("--- Evaluating test dataset on Closed World ---")
             model.load_state_dict(torch.load(os.path.join(
-                    config.load_model, "val_best.pt"
+                    config.save_path, "val_best.pt"
                 )))
             evaluate(model, test_dataset, config)
 
@@ -168,7 +168,7 @@ def evaluate(model, dataset, config):
         result = result + key + "  " + str(round(test_stats[key], 4)) + "| "
         test_saved_results[key] = round(test_stats[key], 4)
     print(result)
-    test_saved_results['loss'] = loss_avg
+    test_saved_results['best_loss'] = loss_avg
     return test_saved_results
 
 
